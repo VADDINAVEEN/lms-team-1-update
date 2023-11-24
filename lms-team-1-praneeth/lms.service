@@ -1,0 +1,11 @@
+[Unit]
+Description=LMS Application
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/java -jar /usr/local/bin/target/LMS-0.0.1-SNAPSHOT.jar
+Restart=always
+RestartSec=10
+User=ubuntu
+[Install]
+WantedBy=default.target
